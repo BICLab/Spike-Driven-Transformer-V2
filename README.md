@@ -9,7 +9,12 @@ BICLab, Institute of Automation, Chinese Academy of Sciences
 :rocket:  :rocket:  :rocket: **News**:
 
 - **Jan. 16, 2024**: Accepted as poster in ICLR2024.
-- **Feb. 07, 2024**: Release the training and inference codes on IN1K.
+- **Feb. 15, 2024**: Release the training and inference codes in classfication, detection and segmentation tasks.
+
+TODO:
+
+- [x] Upload train and test scripts.
+- [ ] Upload checkpoints.
 
 ## Abstract
 
@@ -17,7 +22,9 @@ Neuromorphic computing, which exploits Spiking Neural Networks (SNNs) on neuromo
 
 ![V2](./img/300_spike_driven_transformer_v2_me.png)
 
-## Requirements
+## classification
+
+### Requirements
 
 ```python3
 pytorch >= 2.0.0
@@ -25,11 +32,11 @@ cupy
 spikingjelly == 0.0.0.0.12
 ```
 
-## Results on Imagenet-1K
+### Results on Imagenet-1K
 
 The checkpoints are comming soon.
 
-## Train & Test
+### Train & Test
 
 The hyper-parameters are in `./conf/`.
 
@@ -43,7 +50,7 @@ torchrun --standalone --nproc_per_node=8 \
   --blr 6e-4 \
   --warmup_epochs 10 \
   --epochs 200 \
-  --model spikformer_8_512_CAFormer \
+  --model metaspikformer_8_512 \
   --data_path /your/data/path \
   --output_dir outputs/T1 \
   --log_dir outputs/T1 \
@@ -53,7 +60,7 @@ torchrun --standalone --nproc_per_node=8 \
 
 Finetune:
 
-> Please download caformer_b36_in21_ft1k.pth first.
+> Please download caformer_b36_in21_ft1k.pth first following [PoolFormer](https://github.com/sail-sg/poolformer).
 
 ```shell
 torchrun --standalone --nproc_per_node=8 \
@@ -62,7 +69,7 @@ torchrun --standalone --nproc_per_node=8 \
   --blr 2e-5 \
   --warmup_epochs 5 \
   --epochs 50 \
-  --model spikformer_8_512_CAFormer \
+  --model metaspikformer_8_512 \
   --data_path /your/data/path \
   --output_dir outputs/T4 \
   --log_dir outputs/T4 \
@@ -78,44 +85,10 @@ torchrun --standalone --nproc_per_node=8 \
 Test:
 
 ```shell
-python main_finetune.py --batch_size 128 --model spikformer_8_512_CAFormer --data_path /your/data/path --eval --resume /your/ckpt/path
+python main_finetune.py --batch_size 128 --model metaspikformer_8_512 --data_path /your/data/path --eval --resume /your/ckpt/path
 ```
 
-## Data Prepare
-
-- use `PyTorch` to load the CIFAR10 and CIFAR100 dataset.
-- use `SpikingJelly` to prepare and load the Gesture and CIFAR10-DVS dataset.
-
-Tree in `./data/`.
-
-```shell
-.
-├── cifar-100-python
-├── cifar-10-batches-py
-├── cifar10-dvs
-│   ├── download
-│   ├── events_np
-│   ├── extract
-│   ├── frames_number_10_split_by_number
-│   └── frames_number_16_split_by_number
-├── cifar10-dvs-tet
-│   ├── test
-│   └── train
-└── DVSGesturedataset
-    ├── download
-    ├── events_np
-    │   ├── test
-    │   └── train
-    ├── extract
-    │   └── DvsGesture
-    ├── frames_number_10_split_by_number
-    │   ├── download
-    │   ├── test
-    │   └── train
-    └── frames_number_16_split_by_number
-        ├── test
-        └── train
-```
+### Data Prepare
 
 ImageNet with the following folder structure, you can extract imagenet by this [script](https://gist.github.com/BIGBALLON/8a71d225eff18d88e469e6ea9b39cef4).
 
@@ -151,3 +124,9 @@ url={https://openreview.net/forum?id=1SIBN5Xyw7}
 For help or issues using this git, please submit a GitHub issue.
 
 For other communications related to this git, please contact `manyao@ia.ac.cn` and `jkhu29@stu.pku.edu.cn`.
+
+## Thanks
+
+Our implementation is mainly based on the following codebases. We gratefully thank the authors for their wonderful works.
+
+[deit](https://github.com/facebookresearch/deit), [mmdetection](https://github.com/open-mmlab/mmdetection), [mmsegentation](https://github.com/open-mmlab/mmsegmentation)
