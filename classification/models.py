@@ -563,7 +563,7 @@ class Spiking_vit_MetaFormer(nn.Module):
         return x
 
 
-def spikformer_8_384_CAFormer(**kwargs):
+def metaspikformer_8_384(**kwargs):
     model = Spiking_vit_MetaFormer(
         img_size_h=224,
         img_size_w=224,
@@ -601,7 +601,7 @@ def metaspikformer_8_512(**kwargs):
     return model
 
 
-def spikformer_8_768_CAFormer(**kwargs):
+def metaspikformer_8_768(**kwargs):
     model = Spiking_vit_MetaFormer(
         img_size_h=224,
         img_size_w=224,
