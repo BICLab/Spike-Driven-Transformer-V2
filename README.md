@@ -1,6 +1,6 @@
 # Spike-driven Transformer V2: Meta Spiking Neural Network Architecture Inspiring the Design of Next-generation Neuromorphic Chips ([ICLR2024](https://openreview.net/forum?id=1SIBN5Xyw7))
 
-[Man Yao*](https://scholar.google.com/citations?user=eE4vvp0AAAAJ), [Jiakui Hu*](https://github.com/jkhu29), [Tianxiang Hu](), [Yifan Xu](https://scholar.google.com/citations?hl=zh-CN&user=pbcoTgsAAAAJ), [Zhaokun Zhou](https://scholar.google.com/citations?user=4nz-h1QAAAAJ), [Yonghong Tian](https://scholar.google.com/citations?user=fn6hJx0AAAAJ), [Bo Xu](), [Guoqi Li](https://scholar.google.com/citations?user=qCfE--MAAAAJ&)
+[Man Yao](https://scholar.google.com/citations?user=eE4vvp0AAAAJ), [Jiakui Hu](https://github.com/jkhu29), [Tianxiang Hu](), [Yifan Xu](https://scholar.google.com/citations?hl=zh-CN&user=pbcoTgsAAAAJ), [Zhaokun Zhou](https://scholar.google.com/citations?user=4nz-h1QAAAAJ), [Yonghong Tian](https://scholar.google.com/citations?user=fn6hJx0AAAAJ), [Bo Xu](), [Guoqi Li](https://scholar.google.com/citations?user=qCfE--MAAAAJ&)
 
 BICLab, Institute of Automation, Chinese Academy of Sciences
 
