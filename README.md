@@ -22,7 +22,7 @@ Neuromorphic computing, which exploits Spiking Neural Networks (SNNs) on neuromo
 
 ![V2](./img/300_spike_driven_transformer_v2_me.png)
 
-## classification
+## Classification
 
 ### Requirements
 
