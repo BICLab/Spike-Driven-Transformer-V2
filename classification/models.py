@@ -553,7 +553,7 @@ class Spiking_vit_MetaFormer(nn.Module):
         x = self.forward_features(x)
         x = x.flatten(3).mean(3)
         x_lif = self.lif(x)
-        x = self.head(x).mean(0)
+        x = self.head(x_lif).mean(0)
         if self.kd:
             x_kd = self.head_kd(x_lif).mean(0)
             if self.training:
@@ -622,6 +622,3 @@ def metaspikformer_8_768(**kwargs):
 
 from timm.models import create_model
 
-if __name__ == "__main__":
-    model = spikformer_8_768_CAFormer()
-    torchinfo.summary(model, (2, 3, 224, 224))
