@@ -1,7 +1,0 @@
-matplotlib
-numpy
-pycocotools
-scipy
-shapely
-six
-terminaltables
