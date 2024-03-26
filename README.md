@@ -9,7 +9,7 @@ BICLab, Institute of Automation, Chinese Academy of Sciences
 :rocket:  :rocket:  :rocket: **News**:
 
 - **Jan. 16, 2024**: Accepted as poster in ICLR2024.
-- **Feb. 15, 2024**: Release the training and inference codes in classfication, detection and segmentation tasks.
+- **Feb. 15, 2024**: Release the training and inference codes in classification tasks.
 
 TODO:
 
@@ -39,7 +39,6 @@ The checkpoints are comming soon.
 ### Train & Test
 
 The hyper-parameters are in `./conf/`.
-
 
 Train:
 
