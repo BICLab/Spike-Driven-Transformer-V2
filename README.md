@@ -129,4 +129,4 @@ For other communications related to this git, please contact `manyao@ia.ac.cn` a
 
 Our implementation is mainly based on the following codebases. We gratefully thank the authors for their wonderful works.
 
-[deit](https://github.com/facebookresearch/deit), [mmdetection](https://github.com/open-mmlab/mmdetection), [mmsegentation](https://github.com/open-mmlab/mmsegmentation)
+[deit](https://github.com/facebookresearch/deit)
