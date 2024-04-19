@@ -10,11 +10,12 @@ BICLab, Institute of Automation, Chinese Academy of Sciences
 
 - **Jan. 16, 2024**: Accepted as poster in ICLR2024.
 - **Feb. 15, 2024**: Release the training and inference codes in classification tasks.
+- **Apr. 19, 2024**: Release the [pre-trained ckpts and training logs](https://drive.google.com/drive/folders/12JcIRG8BF6JcgPsXIetSS14udtHXeSSx?usp=sharing) of SDT-v2.
 
 TODO:
 
 - [x] Upload train and test scripts.
-- [ ] Upload checkpoints.
+- [x] Upload checkpoints.
 
 ## Abstract
 
@@ -34,7 +35,7 @@ spikingjelly == 0.0.0.0.12
 
 ### Results on Imagenet-1K
 
-The checkpoints are comming soon.
+Pre-trained ckpts and training logs of 55M: [here](https://drive.google.com/drive/folders/12JcIRG8BF6JcgPsXIetSS14udtHXeSSx?usp=sharing).
 
 ### Train & Test
 
